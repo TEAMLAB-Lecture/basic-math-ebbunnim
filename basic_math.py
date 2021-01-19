@@ -1,11 +1,3 @@
-#######################
-# Basic Math          #
-#######################
-
-"""
-여기서 간단한 수학을 하는 프로그램을 만들것입니다. 
-"""
-
 def get_greatest(number_list):
     return max(number_list)
 
@@ -15,32 +7,16 @@ def get_smallest(number_list):
 
 
 def get_mean(number_list):
-    return sum(number_list)//len(number_list)
+    return sum(number_list)/len(number_list)
 
 
 def get_median(number_list):
-    """
-    주어진 리스트 숫자들의 중간값을 구함.
-
-        Parameters:
-            number_list (list): integer로 값으로만 구성된 list
-            ex - [10, 33, 22, 99, 33]
-
-        Returns:
-            median (int): parameter number_list 숫자들의 중간값
-
-        Examples:
-            >>> number_list = [39, 54, 32, 11, 99]
-            >>> import basic_math as bm
-            >>> bm.get_median(number_list)
-            39
-            >>> number_list2 = [39, 54, 32, 11, 99, 5]
-            >>> bm.get_median(number_list2)
-            35.5 [5,11,32,39,54,99]
-    """
     number_list.sort()
     l=len(number_list)
     if l%2:
         return number_list[l//2]
     a,b=number_list[l//2-1],number_list[l//2]
     return (a+b)/2
+
+
+print(get_mean([54, 56, 30, 12, 58, 25, 17, 48, 80, 23]))
